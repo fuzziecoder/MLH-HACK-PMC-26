@@ -31,9 +31,8 @@ export default function Venue() {
                         <SpotlightCard spotlightColor="rgba(255,255,255,0.04)" className="h-full flex flex-col justify-between">
                             <div>
                                 <p className="text-xs text-[#777] font-mono uppercase tracking-widest mb-4">Location</p>
-                                <h3 className="text-lg font-bold text-[#aaa] mb-2">New Hall 3</h3>
+                                <h3 className="text-lg font-bold text-[#aaa] mb-2">New Hall [TBD]</h3>
                                 <p className="text-[#888] text-sm leading-relaxed mb-6">
-                                    New Hall [TBD]<br />
                                     PMC Tech<br />
                                     Hosur, Tamil Nadu<br />
                                     India
@@ -50,7 +49,7 @@ export default function Venue() {
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <span className="text-[#555]">🏭</span>
-                                    <span className="text-[#888] text-xs font-mono">Industrial area, near Sipcot</span>
+                                    <span className="text-[#888] text-xs font-mono">Near Koneripalli</span>
                                 </div>
                             </div>
                         </SpotlightCard>

@@ -22,12 +22,13 @@ const navItems = [
     ],
   },
   {
-    label: 'Register',
+    label: 'Resources',
     bgColor: '#0a0a0a',
     textColor: '#888',
     links: [
       { label: 'Apply Now', href: 'https://events.mlh.io/events/13832-hack-days-in-hosur', ariaLabel: 'Register on MLH' },
       { label: 'FAQ', href: '#faq', ariaLabel: 'Frequently asked questions' },
+      { label: 'Contact', href: '#contact', ariaLabel: 'Contact organizers' },
     ],
   },
 ];

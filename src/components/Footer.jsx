@@ -100,8 +100,8 @@ export default function Footer() {
                 <div className="pt-8 border-t border-[#0f0f0f] flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-[#888] text-xs font-mono">
                         Built with ❤️ by{' '}
-                        <a href="https://github.com/fuzziecoder" target="_blank" rel="noopener noreferrer" className="hover:text-[#ccc] transition-colors">
-                            team Flexiroasters
+                        <a href="https://fuzziecoder.online" target="_blank" rel="noopener noreferrer" className="hover:text-[#ccc] transition-colors">
+                            fuzziecoder
                         </a>
                     </p>
                     <p className="text-[#777] text-xs font-mono">© 2026 Hack Days in Hosur. All rights reserved.</p>

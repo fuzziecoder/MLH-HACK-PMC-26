@@ -1,13 +1,26 @@
 .glitch {
     color: #e0e0e0;
-    font-size: clamp(2rem, 8vw, 5rem);
-    white-space: nowrap;
+    font-size: clamp(2rem, 10vw, 5rem);
     font-weight: 900;
     position: relative;
     margin: 0 auto;
     user-select: none;
     cursor: default;
     letter-spacing: -0.02em;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .glitch {
+        white-space: normal;
+        line-height: 1.1;
+    }
+}
+
+@media (min-width: 481px) {
+    .glitch {
+        white-space: nowrap;
+    }
 }
 
 .glitch::after,

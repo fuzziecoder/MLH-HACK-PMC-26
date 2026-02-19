@@ -7,7 +7,7 @@ const details = [
     { icon: '⏰', label: 'Time', value: '9:30 AM – 4:00 PM' },
     { icon: '📍', label: 'Venue', value: 'New Hall 3, Hosur' },
     { icon: '👥', label: 'Who Can Attend', value: 'Students & Early Professionals' },
-    { icon: '🏫', label: 'Organizer', value: 'Flexiroasters' },
+    { icon: '🏫', label: 'Organizer', value: <a href="https://fuzziecoder.online" target="_blank" rel="noopener noreferrer" className="hover:text-[#eee] transition-colors underline underline-offset-4 decoration-[#222]">Flexiroasters</a> },
     { icon: '🧠', label: 'Theme', value: 'AI + Full Stack Innovation' },
 ];
 

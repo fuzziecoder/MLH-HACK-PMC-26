@@ -32,12 +32,12 @@ function useCountdown(targetDate) {
 
 const CountdownUnit = ({ value, label }) => (
     <div className="flex flex-col items-center">
-        <div className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-xl border border-[#1f1f1f] bg-[#0a0a0a]">
-            <span className="font-mono text-2xl md:text-3xl font-bold text-[#c8c8c8]">
+        <div className="relative w-14 h-14 md:w-20 md:h-20 flex items-center justify-center rounded-xl border border-[#1f1f1f] bg-[#0a0a0a]">
+            <span className="font-mono text-xl md:text-3xl font-bold text-[#c8c8c8]">
                 {String(value ?? 0).padStart(2, '0')}
             </span>
         </div>
-        <span className="mt-2 text-xs text-[#888] uppercase tracking-widest font-mono">{label}</span>
+        <span className="mt-2 text-[10px] md:text-xs text-[#888] uppercase tracking-widest font-mono">{label}</span>
     </div>
 );
 
@@ -159,13 +159,13 @@ export default function Hero({ onRegisterClick }) {
                     className="mb-12"
                 >
                     <p className="text-xs text-[#888] font-mono uppercase tracking-widest mb-5">Event Starts In</p>
-                    <div className="flex items-center gap-4 md:gap-6">
+                    <div className="flex items-center gap-2 md:gap-6">
                         <CountdownUnit value={countdown.days} label="Days" />
-                        <span className="text-[#888] text-2xl font-mono pb-5">:</span>
+                        <span className="text-[#888] text-xl md:text-2xl font-mono pb-5">:</span>
                         <CountdownUnit value={countdown.hours} label="Hrs" />
-                        <span className="text-[#888] text-2xl font-mono pb-5">:</span>
+                        <span className="text-[#888] text-xl md:text-2xl font-mono pb-5">:</span>
                         <CountdownUnit value={countdown.minutes} label="Min" />
-                        <span className="text-[#888] text-2xl font-mono pb-5">:</span>
+                        <span className="text-[#888] text-xl md:text-2xl font-mono pb-5">:</span>
                         <CountdownUnit value={countdown.seconds} label="Sec" />
                     </div>
                 </motion.div>
