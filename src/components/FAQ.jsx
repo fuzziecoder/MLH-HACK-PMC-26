@@ -21,7 +21,7 @@ const faqs = [
     },
     {
         q: 'What will I build?',
-        a: 'Anything! The theme revolves around AI and full-stack innovation. Projects powered by Google Gemini are encouraged.',
+        a: 'Anything! The theme revolves around AI and innovation based creative solution which make sense by solving real world problems . Projects powered by Google Gemini are encouraged.',
     },
 ];
 
