@@ -17,18 +17,18 @@ export default function RegistrationForm() {
     const onFinalStepCompleted = async () => {
         const data = getValues();
         setIsSubmitting(true);
-        
+
         try {
             // Google Apps Script URL provided by the user
             const scriptURL = 'https://script.google.com/macros/s/AKfycbzi5Y4Mx726MBnbW97wTcJAlQPxiyVQzfJqyptZMAKD5oq4gKgfxWSxe4lXXbrArib7-w/exec';
-            
+
             await fetch(scriptURL, {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
-            
+
             setSubmitted(true);
         } catch (error) {
             console.error('Error submitting form:', error);
@@ -93,12 +93,12 @@ export default function RegistrationForm() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-14"
+                    className="text-center mb-10 md:mb-14"
                 >
                     <div className="inline-flex items-center gap-2 border border-[#1f1f1f] rounded-full px-4 py-1 mb-5">
                         <span className="text-xs text-[#888] font-mono tracking-widest uppercase">Register</span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                    <h2 className="text-2xl md:text-4xl font-bold mb-4">
                         <ShinyText text="Secure Your Spot" color="#888" shineColor="#eee" speed={4} />
                     </h2>
                     <p className="text-[#888] text-sm">

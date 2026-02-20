@@ -1,6 +1,6 @@
 .glitch {
     color: #e0e0e0;
-    font-size: clamp(2rem, 10vw, 5rem);
+    font-size: clamp(1.5rem, 7.5vw, 5rem);
     font-weight: 900;
     position: relative;
     margin: 0 auto;
@@ -8,18 +8,18 @@
     cursor: default;
     letter-spacing: -0.02em;
     text-align: center;
+    white-space: nowrap;
 }
 
 @media (max-width: 480px) {
-    .glitch {
-        white-space: normal;
-        line-height: 1.1;
-    }
-}
 
-@media (min-width: 481px) {
-    .glitch {
-        white-space: nowrap;
+    /* Reduce glitch offset on mobile for a tighter, cleaner effect */
+    .glitch:not(.enable-on-hover)::after {
+        left: 2px;
+    }
+
+    .glitch:not(.enable-on-hover)::before {
+        left: -2px;
     }
 }
 

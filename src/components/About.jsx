@@ -24,12 +24,12 @@ export default function About() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
-                    className="text-center mb-16"
+                    className="text-center mb-10 md:mb-16"
                 >
                     <div className="inline-flex items-center gap-2 border border-[#1f1f1f] rounded-full px-4 py-1 mb-5">
                         <span className="text-xs text-[#888] font-mono tracking-widest uppercase">About the Event</span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                    <h2 className="text-2xl md:text-4xl font-bold mb-4">
                         <ShinyText text="A Mini Hackathon for Builders" color="#888" shineColor="#eee" speed={4} />
                     </h2>
                     <p className="text-[#888] max-w-2xl mx-auto text-sm md:text-base leading-relaxed">

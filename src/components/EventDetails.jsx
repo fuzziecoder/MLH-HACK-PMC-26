@@ -8,7 +8,7 @@ const details = [
     { icon: '📍', label: 'Venue', value: 'New Hall 3, Hosur' },
     { icon: '👥', label: 'Who Can Attend', value: 'Students & Early Professionals' },
     { icon: '🏫', label: 'Organizer', value: <a href="https://fuzziecoder.online" target="_blank" rel="noopener noreferrer" className="hover:text-[#eee] transition-colors underline underline-offset-4 decoration-[#222]">Flexiroasters</a> },
-    { icon: '🧠', label: 'Theme', value: 'AI + Full Stack Innovation' },
+    { icon: '🧠', label: 'Theme', value: 'Innovative AI Solutions' },
 ];
 
 const fadeUp = {
@@ -24,12 +24,12 @@ export default function EventDetails() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-14"
+                    className="text-center mb-10 md:mb-14"
                 >
                     <div className="inline-flex items-center gap-2 border border-[#1f1f1f] rounded-full px-4 py-1 mb-5">
                         <span className="text-xs text-[#888] font-mono tracking-widest uppercase">Event Details</span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold">
+                    <h2 className="text-2xl md:text-4xl font-bold">
                         <ShinyText text="Everything You Need to Know" color="#888" shineColor="#eee" speed={4} />
                     </h2>
                 </motion.div>

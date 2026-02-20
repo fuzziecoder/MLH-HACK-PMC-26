@@ -4,7 +4,7 @@ import ColorBends from './ui/ColorBends';
 import GlitchText from './ui/GlitchText';
 import ShinyText from './ui/ShinyText';
 import StarBorder from './ui/StarBorder';
-import mlhLogo from '../assets/mlh-logo.png';
+import mlhLogo from '../assets/mlh-logo-color.png';
 import geminiLogo from '../assets/gemini-logo.png';
 
 // Countdown timer hook
@@ -51,14 +51,14 @@ const LogoLoop = () => {
         { src: geminiLogo, alt: 'Google Gemini' },
     ];
     return (
-        <div className="logo-loop-wrapper relative overflow-hidden w-full mt-8">
-            <div className="logo-loop-track flex gap-16 items-center">
+        <div className="logo-loop-wrapper relative overflow-hidden w-full mt-6">
+            <div className="logo-loop-track flex gap-8 md:gap-16 items-center">
                 {logos.map((logo, i) => (
                     <div key={i} className="flex-shrink-0 flex items-center justify-center opacity-100 transition-opacity duration-300">
                         <img
                             src={logo.src}
                             alt={logo.alt}
-                            className={`h-16 md:h-20 object-contain ${logo.alt === 'MLH' ? 'filter invert' : ''}`}
+                            className={`h-10 md:h-20 object-contain`}
                         />
                     </div>
                 ))}
@@ -90,7 +90,7 @@ export default function Hero({ onRegisterClick }) {
             <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#060606]/40 via-transparent to-[#060606]/40" />
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col items-center text-center px-4 md:px-8 max-w-5xl mx-auto pt-28 pb-16">
+            <div className="relative z-10 flex flex-col items-center text-center px-4 md:px-8 max-w-5xl mx-auto pt-24 md:pt-28 pb-12 md:pb-16">
 
                 {/* Badge */}
                 <motion.div
@@ -128,7 +128,7 @@ export default function Hero({ onRegisterClick }) {
                         color="#555"
                         shineColor="#aaa"
                         spread={90}
-                        className="text-sm md:text-base font-mono"
+                        className="text-xs md:text-base font-mono leading-relaxed"
                     />
                 </motion.div>
 
@@ -137,7 +137,7 @@ export default function Hero({ onRegisterClick }) {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
-                    className="mb-14"
+                    className="mb-10 md:mb-14"
                 >
                     <StarBorder
                         as="a"
@@ -156,7 +156,7 @@ export default function Hero({ onRegisterClick }) {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.9 }}
-                    className="mb-12"
+                    className="mb-8 md:mb-12"
                 >
                     <p className="text-xs text-[#888] font-mono uppercase tracking-widest mb-5">Event Starts In</p>
                     <div className="flex items-center gap-2 md:gap-6">
@@ -175,9 +175,9 @@ export default function Hero({ onRegisterClick }) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1.1 }}
-                    className="w-full max-w-xl"
+                    className="w-full max-w-md md:max-w-xl"
                 >
-                    <p className="text-sm text-[#aaa] font-mono uppercase tracking-widest mb-5 letter-spacing-widest">Powered By</p>
+                    <p className="text-xs md:text-sm text-[#aaa] font-mono uppercase tracking-widest mb-3 md:mb-5">Powered By</p>
                     <LogoLoop />
                 </motion.div>
             </div>

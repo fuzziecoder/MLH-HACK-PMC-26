@@ -28,6 +28,25 @@ body {
   position: relative;
 }
 
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #222 #060606;
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #060606;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 3px;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);

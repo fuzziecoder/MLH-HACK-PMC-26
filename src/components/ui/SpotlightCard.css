@@ -40,3 +40,10 @@
     position: relative;
     z-index: 1;
 }
+
+@media (max-width: 480px) {
+    .card-spotlight {
+        padding: 1.25rem;
+        border-radius: 0.75rem;
+    }
+}

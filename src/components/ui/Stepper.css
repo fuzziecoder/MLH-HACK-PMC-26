@@ -145,3 +145,21 @@
     width: 0.9rem;
     color: #e0e0e0;
 }
+
+@media (max-width: 480px) {
+    .step-indicator-row {
+        padding: 1.25rem 1rem 1rem;
+    }
+
+    .step-default {
+        padding: 0 1rem;
+    }
+
+    .footer-container {
+        padding: 0 1rem 1.25rem;
+    }
+
+    .step-circle-container {
+        border-radius: 1rem;
+    }
+}
