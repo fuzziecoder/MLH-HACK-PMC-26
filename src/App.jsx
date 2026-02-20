@@ -18,6 +18,7 @@ const navItems = [
     textColor: '#888',
     links: [
       { label: 'Schedule', href: '#schedule', ariaLabel: 'Event schedule' },
+      { label: 'Prizes', href: '#prizes', ariaLabel: 'Prizes & recognition' },
       { label: 'Venue', href: '#venue', ariaLabel: 'Venue information' },
     ],
   },
@@ -27,8 +28,8 @@ const navItems = [
     textColor: '#888',
     links: [
       { label: 'Apply Now', href: 'https://events.mlh.io/events/13832-hack-days-in-hosur', ariaLabel: 'Register on MLH' },
+      { label: 'Discord', href: 'https://discord.gg/y65P74z9M', ariaLabel: 'Join Discord server' },
       { label: 'FAQ', href: '#faq', ariaLabel: 'Frequently asked questions' },
-      { label: 'Contact', href: '#contact', ariaLabel: 'Contact organizers' },
     ],
   },
 ];

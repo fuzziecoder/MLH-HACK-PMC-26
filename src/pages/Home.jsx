@@ -2,6 +2,7 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import EventDetails from '../components/EventDetails';
 import Schedule from '../components/Schedule';
+import Prizes from '../components/Prizes';
 import RegistrationForm from '../components/RegistrationForm';
 import Venue from '../components/Venue';
 import FAQ from '../components/FAQ';
@@ -18,6 +19,7 @@ export default function Home() {
             <About />
             <EventDetails />
             <Schedule />
+            <Prizes />
             <RegistrationForm />
             <Venue />
             <FAQ />

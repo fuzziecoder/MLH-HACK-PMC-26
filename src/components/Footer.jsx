@@ -3,6 +3,7 @@ import StarBorder from './ui/StarBorder';
 import ShinyText from './ui/ShinyText';
 
 const socialLinks = [
+    { label: 'Discord', href: 'https://discord.gg/y65P74z9M', icon: '🎮' },
     { label: 'GitHub', href: 'https://github.com/fuzziecoder', icon: '⌬' },
     { label: 'LinkedIn', href: 'https://linkedin.com/in/fuzziecoder', icon: '⌁' },
     { label: 'X / Twitter', href: 'https://x.com/fuzziecoder', icon: '✕' },
@@ -75,6 +76,27 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
+
+                {/* Discord CTA */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col items-center gap-3 py-8 border-t border-[#111]"
+                >
+                    <p className="text-[#7289da] text-xs font-mono uppercase tracking-widest">📢 Stay Updated</p>
+                    <p className="text-[#888] text-xs text-center max-w-md">
+                        All announcements, team formation, and end-to-end event details will be shared on our Discord server.
+                    </p>
+                    <a
+                        href="https://discord.gg/y65P74z9M"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-[#5865F2] hover:bg-[#4752c4] text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-colors"
+                    >
+                        🎮 Join Discord Server
+                    </a>
+                </motion.div>
 
                 {/* Register CTA */}
                 <motion.div
