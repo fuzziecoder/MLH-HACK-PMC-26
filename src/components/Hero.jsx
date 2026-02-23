@@ -71,7 +71,7 @@ export default function Hero({ onRegisterClick }) {
     const countdown = useCountdown('2026-03-11T09:30:00+05:30');
 
     return (
-        <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden -mx-8 md:mx-0">
+        <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
             {/* ColorBends Background */}
             <div className="absolute inset-0 z-0">
                 <ColorBends
@@ -90,7 +90,7 @@ export default function Hero({ onRegisterClick }) {
             <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#060606]/40 via-transparent to-[#060606]/40" />
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col items-center text-center px-4 md:px-8 max-w-5xl mx-auto pt-24 md:pt-28 pb-12 md:pb-16">
+            <div className="relative z-10 w-full flex flex-col items-center text-center px-4 md:px-8 max-w-5xl mx-auto pt-24 md:pt-28 pb-12 md:pb-16">
 
                 {/* Badge */}
                 <motion.div
