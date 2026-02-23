@@ -71,7 +71,7 @@ export default function Hero({ onRegisterClick }) {
     const countdown = useCountdown('2026-03-11T09:30:00+05:30');
 
     return (
-        <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+        <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden -mx-8 md:mx-0">
             {/* ColorBends Background */}
             <div className="absolute inset-0 z-0">
                 <ColorBends
