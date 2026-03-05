@@ -3,7 +3,7 @@ import SpotlightCard from './ui/SpotlightCard';
 import ShinyText from './ui/ShinyText';
 
 const details = [
-    { icon: '📅', label: 'Date', value: 'March 11, 2026' },
+    { icon: '📅', label: 'Date', value: 'March 25, 2026' },
     { icon: '⏰', label: 'Time', value: '9:30 AM – 4:00 PM' },
     { icon: '📍', label: 'Venue', value: 'New Hall 3, Hosur' },
     { icon: '👥', label: 'Who Can Attend', value: 'Students & Early Professionals' },

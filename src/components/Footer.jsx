@@ -42,7 +42,7 @@ export default function Footer() {
                         <h3 className="font-mono text-xs tracking-widest text-[#888] uppercase mb-4">Hack Days in Hosur</h3>
                         <p className="text-[#888] text-xs leading-relaxed">
                             A one-day hackathon for builders, dreamers, and makers. Powered by Google Gemini.
-                            March 11, 2026 · Hosur, Tamil Nadu.
+                            March 25, 2026 · Hosur, Tamil Nadu.
                         </p>
                     </div>
 

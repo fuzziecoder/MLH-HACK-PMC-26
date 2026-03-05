@@ -68,7 +68,7 @@ const LogoLoop = () => {
 };
 
 export default function Hero({ onRegisterClick }) {
-    const countdown = useCountdown('2026-03-11T09:30:00+05:30');
+    const countdown = useCountdown('2026-03-25T09:30:00+05:30');
 
     return (
         <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
@@ -100,7 +100,7 @@ export default function Hero({ onRegisterClick }) {
                     className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#222] bg-[#0d0d0d]/80 px-4 py-1.5 backdrop-blur-sm"
                 >
                     <span className="h-1.5 w-1.5 rounded-full bg-[#666] animate-pulse" />
-                    <span className="text-xs text-[#666] font-mono tracking-widest uppercase">March 11, 2026 · Hosur</span>
+                    <span className="text-xs text-[#666] font-mono tracking-widest uppercase">March 25, 2026 · Hosur</span>
                 </motion.div>
 
                 {/* Title */}
@@ -123,7 +123,7 @@ export default function Hero({ onRegisterClick }) {
                     className="mb-10"
                 >
                     <ShinyText
-                        text="March 11, 2026 · 9:30 AM – 4:00 PM · New Hall 3, PMC Tech, Hosur"
+                        text="March 25, 2026 · 9:30 AM – 4:00 PM · New Hall 3, PMC Tech, Hosur"
                         speed={3}
                         color="#555"
                         shineColor="#aaa"
