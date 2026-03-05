@@ -65,5 +65,5 @@ The project uses a standard `doPost(e)` function to handle JSON payloads and app
 - **Accents**: Pure white and soft grey gradients.
 
 ---
-Built for the community by **team Flexiroasters**.
+Built for the community by **team Flexiroasters**. 
 
