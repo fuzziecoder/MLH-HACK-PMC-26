@@ -100,7 +100,7 @@ const CardNav = ({
                     </div>
 
                     <div className="logo-container">
-                        <span className="nav-title">HACK DAYS</span>
+                        <span className="nav-title">HACKTOBERFEST</span>
                     </div>
 
                     <button type="button" className="card-nav-cta-button"

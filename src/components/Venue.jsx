@@ -31,9 +31,10 @@ export default function Venue() {
                         <SpotlightCard spotlightColor="rgba(255,255,255,0.04)" className="h-full flex flex-col justify-between">
                             <div>
                                 <p className="text-xs text-[#777] font-mono uppercase tracking-widest mb-4">Location</p>
-                                <h3 className="text-lg font-bold text-[#aaa] mb-2">New Hall [TBD]</h3>
+                                <h3 className="text-lg font-bold text-[#ccc] mb-1">PMC Tech</h3>
+                                <p className="text-xs font-mono text-[#888] mb-4">Hall: To be announced</p>
                                 <p className="text-[#888] text-sm leading-relaxed mb-6">
-                                    PMC Tech<br />
+                                    PMC Tech Campus<br />
                                     Hosur, Tamil Nadu<br />
                                     India
                                 </p>
@@ -41,15 +42,15 @@ export default function Venue() {
                             <div className="space-y-3">
                                 <div className="flex items-center gap-3">
                                     <span className="text-[#555]">📍</span>
-                                    <span className="text-[#888] text-xs font-mono">Hosur, Tamil Nadu</span>
+                                    <span className="text-[#888] text-xs font-mono">Hosur, Tamil Nadu, India</span>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <span className="text-[#555]">🏛️</span>
+                                    <span className="text-[#888] text-xs font-mono">Hall details will be announced later</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <span className="text-[#555]">🚗</span>
-                                    <span className="text-[#888] text-xs font-mono">Parking available on campus</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <span className="text-[#555]">🏭</span>
-                                    <span className="text-[#888] text-xs font-mono">Near Koneripalli</span>
+                                    <span className="text-[#888] text-xs font-mono">Campus parking available</span>
                                 </div>
                             </div>
                         </SpotlightCard>

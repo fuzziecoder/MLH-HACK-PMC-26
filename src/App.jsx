@@ -1,6 +1,7 @@
 import './index.css';
 import CardNav from './components/ui/CardNav';
 import Home from './pages/Home';
+import { EVENT_CONFIG } from './config/eventConfig';
 
 const navItems = [
   {
@@ -9,6 +10,7 @@ const navItems = [
     textColor: '#888',
     links: [
       { label: 'Event Info', href: '#about', ariaLabel: 'About the event' },
+      { label: 'Highlights', href: '#highlights', ariaLabel: 'Hackathon highlights' },
       { label: 'Details', href: '#details', ariaLabel: 'Event details' },
     ],
   },
@@ -18,17 +20,18 @@ const navItems = [
     textColor: '#888',
     links: [
       { label: 'Schedule', href: '#schedule', ariaLabel: 'Event schedule' },
-      { label: 'Prizes', href: '#prizes', ariaLabel: 'Prizes & recognition' },
+      { label: 'Food & Meals', href: '#food', ariaLabel: 'Food arrangements' },
+      { label: 'Prizes & Swag', href: '#prizes', ariaLabel: 'Prizes and goodies' },
       { label: 'Venue', href: '#venue', ariaLabel: 'Venue information' },
     ],
   },
   {
-    label: 'Resources',
+    label: 'Community',
     bgColor: '#0a0a0a',
     textColor: '#888',
     links: [
-      { label: 'Apply Now', href: 'https://events.mlh.io/events/13832-hack-days-in-hosur', ariaLabel: 'Register on MLH' },
-      { label: 'Discord', href: 'https://discord.gg/y65P74z9M', ariaLabel: 'Join Discord server' },
+      { label: 'WhatsApp Community', href: EVENT_CONFIG.whatsappUrl, ariaLabel: 'Join WhatsApp Community' },
+      { label: 'Register', href: '#register', ariaLabel: 'Event Registration' },
       { label: 'FAQ', href: '#faq', ariaLabel: 'Frequently asked questions' },
     ],
   },

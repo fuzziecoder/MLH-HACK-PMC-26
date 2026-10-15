@@ -1,13 +1,9 @@
 import { motion } from 'framer-motion';
 import SpotlightCard from './ui/SpotlightCard';
 import ShinyText from './ui/ShinyText';
+import { EVENT_CONFIG } from '../config/eventConfig';
 
-const prizes = [
-    { emoji: '🥇', title: 'Best Use of Gemini API', desc: 'MLH Prize — awarded for the most creative & effective integration of Google Gemini.', highlight: true },
-    { emoji: '🥈', title: 'Best Overall Project', desc: 'Top project across all categories — polished, functional, and impactful.' },
-    { emoji: '🥉', title: 'Most Innovative Solution', desc: 'Thinking outside the box — awarded for creativity and originality.' },
-    { emoji: '🎁', title: 'MLH & Google Swag', desc: 'All participants receive exclusive MLH and Google swag packs!' },
-];
+const prizes = EVENT_CONFIG.prizes.items;
 
 const fadeUp = {
     hidden: { opacity: 0, y: 24 },
@@ -25,11 +21,21 @@ export default function Prizes() {
                     className="text-center mb-10 md:mb-14"
                 >
                     <div className="inline-flex items-center gap-2 border border-[#1f1f1f] rounded-full px-4 py-1 mb-5">
-                        <span className="text-xs text-[#888] font-mono tracking-widest uppercase">Prizes</span>
+                        <span className="text-xs text-[#888] font-mono tracking-widest uppercase">Prizes & Goodies</span>
                     </div>
-                    <h2 className="text-2xl md:text-4xl font-bold">
-                        <ShinyText text="Prizes & Recognition" color="#888" shineColor="#eee" speed={4} />
+                    <h2 className="text-2xl md:text-4xl font-bold mb-4">
+                        <ShinyText text="Rewards & Recognition" color="#888" shineColor="#eee" speed={4} />
                     </h2>
+
+                    {/* Prominent NO CASH PRIZES Notice */}
+                    <div className="max-w-xl mx-auto mt-4 border border-[#333] bg-[#0c0c0c] rounded-xl p-4 text-center">
+                        <span className="inline-block text-xs font-mono font-bold tracking-widest text-[#fff] bg-[#222] px-3 py-1 rounded-full mb-2">
+                            {EVENT_CONFIG.prizes.cashNoticeHeading}
+                        </span>
+                        <p className="text-xs md:text-sm text-[#bbb] font-mono leading-relaxed">
+                            {EVENT_CONFIG.prizes.cashNoticeDescription}
+                        </p>
+                    </div>
                 </motion.div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

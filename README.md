@@ -1,13 +1,12 @@
-# ⚡ Hack Days in Hosur — Registration Website
+# ⚡ Hacktoberfest in PMC — Official Website
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 ![Google Gemini](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
-![Google Sheets](https://img.shields.io/badge/Google_Sheets-34A853?style=for-the-badge&logo=googlesheets&logoColor=white)
 
-A modern, dark-futuristic hackathon landing and registration website designed for **Hack Days in Hosur 2026**. Built with high-performance animations, extreme contrast for readability, and a direct integration with Google Sheets for student data management.
+A modern, dark-futuristic hackathon landing website designed for **Hacktoberfest in PMC 2026** at PMC Tech, Hosur, Tamil Nadu. Built with high-performance animations, extreme contrast for readability, and centralized configuration for event operations.
 
 ## 🚀 Key Features
 
@@ -65,5 +64,6 @@ The project uses a standard `doPost(e)` function to handle JSON payloads and app
 - **Accents**: Pure white and soft grey gradients.
 
 ---
-Built for the community by **team Flexiroasters**. 
+Built for the community by **Flexiroasters / Hacktoberfest in PMC organizing team**.
+Official website: [https://fuzziecoder.in/](https://fuzziecoder.in/)
 

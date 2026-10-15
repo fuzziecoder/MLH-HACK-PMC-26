@@ -1,29 +1,45 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ShinyText from './ui/ShinyText';
+import { EVENT_CONFIG } from '../config/eventConfig';
 
-const faqs = [
-    {
-        q: 'Who can attend?',
-        a: 'Students and early professionals with an interest in technology, software, and AI. All skill levels welcome — from beginners to experienced devs.',
-    },
-    {
-        q: 'What should I bring?',
-        a: 'Bring your laptop, charger, any accessories you need, a desire to build, and an open mind. We will provide refreshments and workspace.',
-    },
-    {
-        q: 'Is it free?',
-        a: 'Yes! Hack Days in Hosur is completely free. Just register and show up ready to build.',
-    },
-    {
-        q: 'Do I need a team?',
-        a: 'You can come solo or with a team. We also provide team formation activities — just select "Looking for Team" during registration.',
-    },
-    {
-        q: 'What will I build?',
-        a: 'Anything! The theme revolves around AI and innovation based creative solution which make sense by solving real world problems . Projects powered by Google Gemini are encouraged.',
-    },
-];
+const faqs = EVENT_CONFIG.faqs;
+
+function formatAnswer(text) {
+    if (text.includes('https://chat.whatsapp.com')) {
+        const parts = text.split('https://chat.whatsapp.com/BXyaYKATJvM1614nMeNYc5?s=cl&p=a&mlu=4&ilr=4');
+        return (
+            <span>
+                {parts[0]}
+                <a
+                    href={EVENT_CONFIG.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#25D366] underline underline-offset-2 hover:text-[#45e07f] transition-colors break-all"
+                >
+                    Official WhatsApp Group
+                </a>
+                {parts[1]}
+            </span>
+        );
+    }
+    if (text.includes('ramvj2005@gmail.com')) {
+        const parts = text.split('ramvj2005@gmail.com');
+        return (
+            <span>
+                {parts[0]}
+                <a
+                    href="mailto:ramvj2005@gmail.com"
+                    className="text-[#eee] underline underline-offset-2 hover:text-[#fff] transition-colors"
+                >
+                    ramvj2005@gmail.com
+                </a>
+                {parts[1]}
+            </span>
+        );
+    }
+    return text;
+}
 
 function FAQItem({ question, answer, isOpen, onToggle }) {
     return (
@@ -50,7 +66,7 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
                         transition={{ duration: 0.3 }}
                     >
                         <div className="px-5 py-4 bg-[#060606] border-t border-[#111]">
-                            <p className="text-[#888] text-sm leading-relaxed">{answer}</p>
+                            <p className="text-[#888] text-sm leading-relaxed">{formatAnswer(answer)}</p>
                         </div>
                     </motion.div>
                 )}

@@ -1,19 +1,37 @@
 import { motion } from 'framer-motion';
 import SpotlightCard from './ui/SpotlightCard';
 import ShinyText from './ui/ShinyText';
+import { EVENT_CONFIG } from '../config/eventConfig';
 
 const details = [
-    { icon: '📅', label: 'Date', value: 'March 25, 2026' },
-    { icon: '⏰', label: 'Time', value: '9:30 AM – 4:00 PM' },
-    { icon: '📍', label: 'Venue', value: 'New Hall 3, Hosur' },
-    { icon: '👥', label: 'Who Can Attend', value: 'Students & Early Professionals' },
-    { icon: '🏫', label: 'Organizer', value: <a href="https://fuzziecoder.online" target="_blank" rel="noopener noreferrer" className="hover:text-[#eee] transition-colors underline underline-offset-4 decoration-[#222]">Flexiroasters</a> },
-    { icon: '🧠', label: 'Theme', value: 'Innovative AI Solutions' },
+    { icon: '⚡', label: 'Event', value: EVENT_CONFIG.name },
+    { icon: '📅', label: 'Date', value: 'October 23, 2026' },
+    { icon: '📍', label: 'Venue', value: 'PMC Tech, Hosur, Tamil Nadu' },
+    { icon: '🏛️', label: 'Hall', value: 'To be announced' },
+    { icon: '👥', label: 'Team Size', value: '1–3 members per team' },
+    { icon: '💻', label: 'Format', value: 'In-person' },
+    { icon: '🎟️', label: 'Registration', value: 'Free' },
+    { icon: '🍽️', label: 'Food Contribution', value: 'Amount to be announced' },
+    { icon: '⏱️', label: 'Schedule', value: 'To be announced' },
+    {
+        icon: '🏫',
+        label: 'Organizer',
+        value: (
+            <a
+                href={EVENT_CONFIG.organizer.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#eee] transition-colors underline underline-offset-4 decoration-[#333]"
+            >
+                {EVENT_CONFIG.organizer.name}
+            </a>
+        ),
+    },
 ];
 
 const fadeUp = {
     hidden: { opacity: 0, y: 24 },
-    visible: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } }),
+    visible: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5 } }),
 };
 
 export default function EventDetails() {
@@ -38,10 +56,10 @@ export default function EventDetails() {
                     {details.map((d, i) => (
                         <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                             <SpotlightCard spotlightColor="rgba(255,255,255,0.04)" className="flex items-start gap-4 h-full">
-                                <span className="text-xl opacity-50 mt-0.5">{d.icon}</span>
+                                <span className="text-xl opacity-60 mt-0.5">{d.icon}</span>
                                 <div>
                                     <p className="text-xs text-[#777] font-mono uppercase tracking-widest mb-1">{d.label}</p>
-                                    <p className="text-[#ccc] font-medium text-sm md:text-base">{d.value}</p>
+                                    <div className="text-[#ccc] font-medium text-sm md:text-base">{d.value}</div>
                                 </div>
                             </SpotlightCard>
                         </motion.div>

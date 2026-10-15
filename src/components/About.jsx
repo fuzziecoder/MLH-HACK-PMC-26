@@ -1,13 +1,9 @@
 import { motion } from 'framer-motion';
 import SpotlightCard from './ui/SpotlightCard';
 import ShinyText from './ui/ShinyText';
+import { EVENT_CONFIG } from '../config/eventConfig';
 
-const features = [
-    { icon: '⚡', title: 'Build Real Projects', desc: 'Create working solutions to real-world problems in a single day of intense focus.' },
-    { icon: '🤝', title: 'Collaborate', desc: 'Connect with developers, designers and thinkers from across the community.' },
-    { icon: '🧠', title: 'AI-Powered', desc: 'Leverage Google Gemini APIs to supercharge your project with cutting-edge intelligence.' },
-    { icon: '🏆', title: 'Win Prizes', desc: 'Compete for recognition and prizes. Show the world what you can build.' },
-];
+const features = EVENT_CONFIG.aboutFeatures;
 
 const fadeUp = {
     hidden: { opacity: 0, y: 30 },
@@ -30,31 +26,29 @@ export default function About() {
                         <span className="text-xs text-[#888] font-mono tracking-widest uppercase">About the Event</span>
                     </div>
                     <h2 className="text-2xl md:text-4xl font-bold mb-4">
-                        <ShinyText text="A Mini Hackathon for Builders" color="#888" shineColor="#eee" speed={4} />
+                        <ShinyText text="A Student Hackathon for Builders" color="#888" shineColor="#eee" speed={4} />
                     </h2>
-                    <p className="text-[#888] max-w-2xl mx-auto text-sm md:text-base leading-relaxed mb-4">
-                        Hack Days in Hosur is a one-day student hackathon focused on building real products with AI and modern tech.
-                        Powered by Google Gemini and brought to life by the local tech community.
+                    <p className="text-[#aaa] max-w-2xl mx-auto text-sm md:text-base leading-relaxed mb-6">
+                        Hacktoberfest in PMC brings together students and technology enthusiasts to develop practical solutions, collaborate with fellow builders, explore modern technologies, and showcase their ideas.
                     </p>
-                    <div className="max-w-2xl mx-auto border border-[#1f1f1f] rounded-xl p-4 md:p-5 bg-[#0a0a0a] mb-4">
-                        <p className="text-xs text-[#777] font-mono uppercase tracking-widest mb-2">🧠 Hackathon Theme</p>
+
+                    <div className="max-w-2xl mx-auto border border-[#1f1f1f] rounded-xl p-4 md:p-5 bg-[#0a0a0a] mb-6">
+                        <p className="text-xs text-[#777] font-mono uppercase tracking-widest mb-2">💡 Hackathon Theme</p>
                         <p className="text-[#ccc] text-sm md:text-base font-medium leading-relaxed">
-                            Build an innovative solution using <span className="text-[#eee]">Google Gemini AI</span> to solve real-world problems.
+                            {EVENT_CONFIG.theme}
                         </p>
                         <p className="text-[#666] text-xs font-mono mt-2 italic">
-                            Problem statement will be revealed on hack day 💥
-                        </p>
-                        <p className="text-[#888] text-xs mt-2">
-                            Participants <span className="text-[#aaa] font-medium">must</span> integrate the Gemini API into their projects.
+                            The final problem statement and technical requirements will be announced by the organizers.
                         </p>
                     </div>
+
                     <a
-                        href="https://discord.gg/y65P74z9M"
+                        href={EVENT_CONFIG.whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-xs font-mono text-[#7289da] hover:text-[#99aab5] transition-colors border border-[#7289da]/30 rounded-full px-4 py-1.5 hover:border-[#7289da]/60"
+                        className="inline-flex items-center gap-2 text-xs font-mono text-[#25D366] hover:text-[#45e07f] transition-colors border border-[#25D366]/30 rounded-full px-4 py-1.5 hover:border-[#25D366]/60 bg-[#0d0d0d]"
                     >
-                        <span>🎮</span> Join our Discord for all announcements
+                        <span>💬</span> Join our WhatsApp community for all announcements
                     </a>
                 </motion.div>
 
@@ -62,7 +56,7 @@ export default function About() {
                     {features.map((f, i) => (
                         <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                             <SpotlightCard spotlightColor="rgba(255,255,255,0.05)" className="h-full">
-                                <div className="text-2xl mb-4 opacity-60">{f.icon}</div>
+                                <div className="text-2xl mb-4 opacity-70">{f.icon}</div>
                                 <h3 className="text-[#ccc] font-semibold text-base mb-2">{f.title}</h3>
                                 <p className="text-[#888] text-sm leading-relaxed">{f.desc}</p>
                             </SpotlightCard>

@@ -1,7 +1,9 @@
 import Hero from '../components/Hero';
 import About from '../components/About';
+import Highlights from '../components/Highlights';
 import EventDetails from '../components/EventDetails';
 import Schedule from '../components/Schedule';
+import Food from '../components/Food';
 import Prizes from '../components/Prizes';
 import RegistrationForm from '../components/RegistrationForm';
 import Venue from '../components/Venue';
@@ -17,8 +19,10 @@ export default function Home() {
         <main>
             <Hero onRegisterClick={scrollToRegister} />
             <About />
+            <Highlights />
             <EventDetails />
             <Schedule />
+            <Food />
             <Prizes />
             <RegistrationForm />
             <Venue />

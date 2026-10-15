@@ -1,15 +1,9 @@
 import { motion } from 'framer-motion';
 import SpotlightCard from './ui/SpotlightCard';
 import ShinyText from './ui/ShinyText';
+import { EVENT_CONFIG } from '../config/eventConfig';
 
-const timeline = [
-    { time: '9:30 AM', event: 'Opening Ceremony', desc: 'Welcome remarks and event kickoff' },
-    { time: '10:00 AM', event: 'Hack Begins', desc: 'Start building your project — time to shine' },
-    { time: '12:30 PM', event: 'Lunch Break', desc: 'Fuel up and keep the momentum going' },
-    { time: '3:00 PM', event: 'Submission Deadline', desc: 'Freeze your code and prep your demo' },
-    { time: '3:15 PM', event: 'Demo & Judging', desc: 'Present your project to the judges' },
-    { time: '4:00 PM', event: 'Closing & Awards', desc: 'Winners announced and event wraps up' },
-];
+const timeline = EVENT_CONFIG.schedule.activities;
 
 export default function Schedule() {
     return (
@@ -24,9 +18,24 @@ export default function Schedule() {
                     <div className="inline-flex items-center gap-2 border border-[#1f1f1f] rounded-full px-4 py-1 mb-5">
                         <span className="text-xs text-[#888] font-mono tracking-widest uppercase">Schedule</span>
                     </div>
-                    <h2 className="text-2xl md:text-4xl font-bold">
-                        <ShinyText text="The Day at a Glance" color="#888" shineColor="#eee" speed={4} />
+                    <h2 className="text-2xl md:text-4xl font-bold mb-4">
+                        <ShinyText text="Event Timeline" color="#888" shineColor="#eee" speed={4} />
                     </h2>
+
+                    {/* Pending schedule notice */}
+                    <div className="max-w-xl mx-auto border border-[#222] bg-[#0c0c0c] rounded-xl p-4 mb-4">
+                        <p className="text-xs md:text-sm text-[#bbb] font-mono leading-relaxed mb-3">
+                            {EVENT_CONFIG.schedule.notice}
+                        </p>
+                        <a
+                            href={EVENT_CONFIG.whatsappUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-xs font-mono text-[#25D366] hover:text-[#45e07f] transition-colors"
+                        >
+                            <span>💬</span> Join WhatsApp Community →
+                        </a>
+                    </div>
                 </motion.div>
 
                 <div className="relative">
@@ -40,7 +49,7 @@ export default function Schedule() {
                                 initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: i * 0.1, duration: 0.5 }}
+                                transition={{ delay: i * 0.08, duration: 0.5 }}
                                 className={`relative flex items-center gap-6 md:gap-0 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                             >
                                 {/* Timeline dot */}
@@ -52,7 +61,10 @@ export default function Schedule() {
                                 {/* Content */}
                                 <div className={`pl-12 md:pl-0 md:w-1/2 ${i % 2 === 0 ? 'md:pr-10' : 'md:pl-10'}`}>
                                     <SpotlightCard spotlightColor="rgba(255,255,255,0.04)" className="!p-4">
-                                        <p className="text-xs text-[#777] font-mono mb-1 tracking-wider">{item.time}</p>
+                                        <div className="flex items-center justify-between mb-1">
+                                            <span className="text-xs text-[#777] font-mono tracking-wider">{item.time}</span>
+                                            <span className="text-[10px] font-mono text-[#555] bg-[#141414] px-2 py-0.5 rounded">Phase {i + 1}</span>
+                                        </div>
                                         <p className="text-[#ccc] font-semibold text-sm">{item.event}</p>
                                         <p className="text-[#888] text-xs mt-1">{item.desc}</p>
                                     </SpotlightCard>
